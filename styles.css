@@ -103,3 +103,8 @@ input.name {
 footer span{
 	font-size: 13px;
 }
+
+footer{
+	background-color: #2a2b34;
+	color: #fff;
+}
