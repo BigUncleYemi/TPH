@@ -42,6 +42,10 @@ input.name {
 	box-shadow: none !important;
 }
 
+input.name::placeholder{
+  color: #c02f28;
+}
+
 .select-dropdown {
   position: relative;
   background-color: transparent;
