@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Abril Fatface', cursive;
+	font-family: "GothamPro";
+	font-weight: lighter;
   /* color: #c02f28; */
 }
 
@@ -24,7 +25,7 @@
 p, span {
   font-size: 30px;
   font-weight: 100;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   color: #250907;
 }
 
@@ -32,18 +33,18 @@ input.name {
 	font-size: 20px;
 	width: 100%;
   font-weight: 100;
-  font-family: 'Montserrat', sans-serif;
-  color: #c02f28;
+  /* font-family: 'Montserrat', sans-serif; */
   border: 0;
-  font-style: italic;
-  font-weight: 700;
-	border-bottom: 5px solid #c02f28;
+  /* font-style: italic; */
+  /* font-weight: 400; */
+	border-bottom: 2px solid #c02f28;
 	outline: none !important;
 	box-shadow: none !important;
+	text-align: center;
 }
 
 input.name::placeholder{
-  color: #c02f28;
+	text-align: center;
 }
 
 .select-dropdown {
@@ -53,7 +54,8 @@ input.name::placeholder{
   float: left;
   max-width: 100%;
   border-radius: 2px;
-  border-bottom: 5px solid #c02f28;
+	text-align: center;
+  border-bottom: 2px solid #c02f28;
 }
 
 .select-dropdown:after {
@@ -61,21 +63,21 @@ input.name::placeholder{
   position: absolute;
   top: 50%;
   margin-top: -2px;
+	text-align: center;
   right: 8px;
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #c02f28;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 2px solid #c02f28;
 }
 
 .select-dropdown select {
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   font-size: 20px;
-  font-weight: 200;
-  width: 100%;
-	font-style: italic;
-	color: #c02f28;
+	width: 100%;
+	text-align-last: center;
+	text-align: center;
   border: none;
   background-color: transparent;
   -webkit-appearance: none;
@@ -89,6 +91,7 @@ input.name::placeholder{
 .select-dropdown select:focus {
   outline: none;
   box-shadow: none;
+	text-align: center;
 }
 
 .conc{
@@ -99,7 +102,7 @@ input.name::placeholder{
 }
 
 #btn-give{
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
 	color: #fff;
 	background-color: #c02f28;
 }
@@ -111,4 +114,29 @@ footer span{
 footer{
 	background-color: #2a2b34;
 	color: #fff;
+}
+label{
+	display: none !important;
+	margin-bottom: 0;
+}
+
+
+h2 {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	line-height: 0.1em !important;
+	margin: 10px 0 20px;
+}
+
+h2 span {
+	background:#fff;
+	font-weight: 400;
+	color: #c02f28;
+	font-size: 16px !important;
+	padding:0 10px;
+}
+
+.form-group {
+  margin-bottom: 0rem !important;
 }
