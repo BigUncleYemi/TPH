@@ -38,7 +38,7 @@
 								<div class="col-sm-6 py-2">
 									<div class="mb-container">
 										<div class="material-textfield">
-											<input type="number" class="name" value="0.00" id="amount" name="amount" placeholder=" ">
+											<input type="number" class="name" required  id="amount" name="amount" placeholder=" ">
 											<label>Amount</label>
 										</div>
 									</div>
@@ -46,7 +46,7 @@
 
 								<div class="col-sm-6 mt-3 py-2 d-flex align-items-center flex-column">
 									<div class="select">
-										<select class="select-text" required>
+										<select id="currency" class="select-text" required>
 											<option value="" disabled selected></option>
 											<option value="NGN">NGN</option>
 											<option value="USD">USD</option>
@@ -60,7 +60,7 @@
 
 								<div class="col-sm-6 mt-3 py-2 d-flex align-items-center flex-column">
 									<div class="select">
-										<select class="select-text" required>
+										<select id="giving" class="select-text" required>
 											<option value="" disabled selected></option>
 											<option value="Offering">Offering</option>
 											<option value="Tithes">Tithes</option>
@@ -83,7 +83,7 @@
 								<div class="col-sm-6 py-2">
 									<div class="mb-container">
 										<div class="material-textfield">
-										<input type="text" class="name" id="name" name="name" placeholder=" ">
+										<input type="text" class="name" required id="name" name="name" placeholder=" ">
 											<label>Name</label>
 										</div>
 									</div>
@@ -92,7 +92,7 @@
 								<div class="col-sm-6 py-2">
 									<div class="mb-container">
 										<div class="material-textfield">
-										<input type="email" class="name" id="email" name="email" placeholder=" ">
+										<input type="email" class="name" required id="email" name="email" placeholder=" ">
 									<label>Email</label>
 										</div>
 									</div>
@@ -101,7 +101,7 @@
 								<div class="col-sm-6 py-2">
 									<div class="mb-container">
 										<div class="material-textfield">
-										<input type="tel" class="name" id="telephone" name="telephone" placeholder=" ">
+										<input type="tel" class="name" required id="telephone" name="telephone" placeholder=" ">
 										<label>Telephone</label>
 										</div>
 									</div>
