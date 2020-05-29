@@ -29,69 +29,8 @@ p, span {
   color: #250907;
 }
 
-input.name {
-	font-size: 20px;
+input {
 	width: 100%;
-  font-weight: 100;
-  /* font-family: 'Montserrat', sans-serif; */
-  border: 0;
-  /* font-style: italic; */
-  /* font-weight: 400; */
-	border-bottom: 2px solid #c02f28;
-	outline: none !important;
-	box-shadow: none !important;
-	text-align: center;
-}
-
-input.name::placeholder{
-	text-align: center;
-}
-
-.select-dropdown {
-  position: relative;
-  background-color: transparent;
-  width: auto;
-  float: left;
-  max-width: 100%;
-  border-radius: 2px;
-	text-align: center;
-  border-bottom: 2px solid #c02f28;
-}
-
-.select-dropdown:after {
-  content: " ";
-  position: absolute;
-  top: 50%;
-  margin-top: -2px;
-	text-align: center;
-  right: 8px;
-  width: 0;
-  height: 0;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-top: 2px solid #c02f28;
-}
-
-.select-dropdown select {
-  /* font-family: 'Montserrat', sans-serif; */
-  font-size: 20px;
-	width: 100%;
-	text-align-last: center;
-	text-align: center;
-  border: none;
-  background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-	outline: none !important;
-	box-shadow: none !important;
-}
-
-.select-dropdown select:active,
-.select-dropdown select:focus {
-  outline: none;
-  box-shadow: none;
-	text-align: center;
 }
 
 .conc{
@@ -115,11 +54,6 @@ footer{
 	background-color: #2a2b34;
 	color: #fff;
 }
-label{
-	display: none !important;
-	margin-bottom: 0;
-}
-
 
 h2 {
 	width: 100%;
@@ -139,4 +73,129 @@ h2 span {
 
 .form-group {
   margin-bottom: 0rem !important;
+}
+
+.mb-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-textfield {
+  position: relative;
+	width: 100%;
+}
+
+label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: gray;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: .1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+input {
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1rem 0.7rem;
+  color: gray;
+  transition: 0.1s ease-out;
+}
+input:focus {
+  border-color: #c02f28;
+}
+input:focus + label {
+  color: #c02f28;
+  top: 0;
+  transform: translateY(-50%) scale(.9);
+}
+input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(.9);
+}
+
+/* select starting stylings ------------------------------*/
+.select {
+	position: relative;
+	width: 100%;
+}
+
+.select-text {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent;
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	font-size: 18px;
+	border-radius: 4px;
+	border: 1px solid gray;
+}
+
+/* Remove focus */
+.select-text:focus {
+	outline: none;
+  border: 2px solid #c02f28;
+}
+
+	/* Use custom arrow */
+.select .select-text {
+	appearance: none;
+	-webkit-appearance:none;
+  color: gray;
+}
+
+.select:after {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	border-top: 1px solid gray;
+
+	pointer-events: none;
+}
+
+/* LABEL ======================================= */
+label.select-label {
+	color: gray;
+  background: white;
+	font-size: 1rem;
+	position: absolute;
+	pointer-events: none;
+  padding: 0 5px;
+	left: 0px;
+	top: 25px;
+	transition: 0.2s ease all;
+}
+
+
+/* active state */
+.select-text:focus ~ label.select-label, .select-text:valid ~ label.select-label {
+	color: #c02f28;
+	top: -4px;
+  left: 0px;
+	transition: 0.2s ease all;
+	font-size: 14px;
+}
+
+.select-text:valid:not(focus) ~ label.select-label {
+  	color: gray;
+  /* background: red; */
+}
+.select-text:valid:focus ~ label.select-label {
+  color: #c02f28;
 }
